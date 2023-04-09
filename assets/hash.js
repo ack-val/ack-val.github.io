@@ -27,6 +27,7 @@ function hashFile(file,outlength,destination) {
         console.log(dataUrl.toString())
         document.getElementById(destination).value = window.hash.hashv2([dataUrl.toString(),outlength])
     })()
+    return('processing')
 }
 window.hash = {
     test(input){return(hash1.test(input))},
