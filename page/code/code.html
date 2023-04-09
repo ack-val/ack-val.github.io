@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>ack's encoder</title>
+        <meta charset="utf-16">
+        <link href="/page/code/hash.css" rel="stylesheet">
+        <script>
+            function setDevToggle(){
+                if(localStorage.getItem('devToggle') == null){
+                    localStorage.setItem('devToggle',`${Boolean(false)}`)
+                }
+                document.getElementById('devToggle').innerHTML=localStorage.getItem('devToggle')
+            }
+            function devHandler(){
+                if(localStorage.getItem('devToggle')=='true'){
+                    localStorage.setItem('devToggle','false')
+                }else if(localStorage.getItem('devToggle')=='false'){
+                    localStorage.setItem('devToggle','true')
+                }
+                document.getElementById('devToggle').innerHTML=localStorage.getItem('devToggle')
+        }
+        document.addEventListener("DOMContentLoaded", function(event){setDevToggle()});
+        </script>
+    </header>
+<body>
+    <div class="div">
+        <h1>This is the place where you can find my code projects</h1>
+        <br>
+        <div>
+        <h1>Settings:</h1>
+        <div>
+            <h3>Debug mode:</h3>
+            <button id="devToggle" onclick="devHandler()">false</button>
+        </div>
+
+    </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>ack's hash v2</title>
+        <link rel="stylesheet" href="/assets/main.css"  >
+        <script src="/assets/iframehandler.js"></script>
+        <meta charset="utf-8">
+    </header>
+<body class="main">
+   <div class="sidebar">
+        <button class="sidebarbutton" onclick="changeIF('/page/code/test')">test</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/encode')">encoder</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/encode64')">encoder64</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/encode1')">encoder v1</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/hash0')">hash v0</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/hash1')">hash v1</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/hash2')">hash v2</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/numberconv')">radix conversion</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/seedRNG')">seed based RNG</button>
+        <button class="sidebarbutton" onclick="changeIF('/page/code/text-5')">letters</button>
+   </div>
+   <div class="iframecontainer">
+    <iframe id="iframe" src="/page/code/code.html" frameborder="0" class="iframe"></iframe>
+    </div>
+</body>
+</html>

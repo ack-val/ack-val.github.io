@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>ack's hash</title>
+        <script src="/assets/hash.js" type="module" ></script>
+        <meta charset="utf-16">
+        <link href="/page/code/hash.css" rel="stylesheet">
+    </header>
+<body>
+    <div class="div">
+        <h1>ack's hash v0</h1>
+        <h3 style="color:aliceblue">22 character limit</h3>
+        <div>
+        <textarea maxlength="22" id="in" placeholder="input" class="inputs"></textarea>
+        <br>
+        <button style="text-align: left" class="button" onclick="document.getElementById('out').value = window.hash.hashv0(document.getElementById('in').value)">HASH</button>
+        <br>
+        <textarea id="out" placeholder="output" class="inputs"></textarea>
+        </div>
+    </div>
+</body>
+</html>
