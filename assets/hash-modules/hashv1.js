@@ -31,13 +31,12 @@ function hashv2(input1){//DONOTEDIT
         stg3.push(parseBigInt(stg2[i],128))
         stg7=stg7 + (parseBigInt(stg2[i],36)*BigInt(i+1))
     }//convert each as a base32 number
-    
-    stg2 = null
     let stg4 = BigInt('0')
     for(let q=0;q<stg2.length;q++){
         let a3 = BigInt('6445812')
         stg4 = stg4 + (stg3[q]*a3)*BigInt(170)
     }
+    stg2 = null
     stg3 = null
     let stg5 = stg7*BigInt(69)
     stg7 = null
