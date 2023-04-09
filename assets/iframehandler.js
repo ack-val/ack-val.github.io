@@ -1,5 +1,5 @@
 function changeIF(page) {
-    let target = `/page/${page}.html`
+    let target = `/${page}.html`
     fetch(target, { method: "HEAD" }) 
     .then(response => { 
         if (response.ok) { 
