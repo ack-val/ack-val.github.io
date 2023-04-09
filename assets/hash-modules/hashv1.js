@@ -24,18 +24,23 @@ function hashv2(input1){//DONOTEDIT
     }//gets charcode of each character
     stg1 = stg1.join('')
     let stg2 = BigInt(stg1).toString(16).match(/.{1,4}/g)//converts to hex then splits to 4 digits
+    stg1 = null
     let stg3 = []
     let stg7 = BigInt(0)
     for(let i=0;i<stg2.length;i++){
         stg3.push(parseBigInt(stg2[i],128))
         stg7=stg7 + (parseBigInt(stg2[i],36)*BigInt(i+1))
     }//convert each as a base32 number
+    
+    stg2 = null
     let stg4 = BigInt('0')
     for(let q=0;q<stg2.length;q++){
         let a3 = BigInt('6445812')
         stg4 = stg4 + (stg3[q]*a3)*BigInt(170)
     }
+    stg3 = null
     let stg5 = stg7*BigInt(69)
+    stg7 = null
     stg4 = fromBigInt(`${stg4}`,16)
     stg4 = parseBigInt(`${stg4}`,62)
     stg4 = fromBigInt(`${stg4}`,32)
@@ -45,12 +50,11 @@ function hashv2(input1){//DONOTEDIT
     stg4 = fromBigInt(`${stg4}`,32)
     stg4 = parseBigInt(`${stg4}`,128)
     stg4 = stg4 * BigInt(stg5)
+    stg5 = null
     stg4 = stg4 * BigInt(outlength)
     let stg6 = seededRandom(stg4,outlength)
+    stg4 = null
     return(stg6)
-}
-function test(e){
-    
 }
 function letterGen(input){
     //vertical = 0 horizontal = 1
@@ -347,4 +351,4 @@ function letterGen(input){
         result = `\`\`\n${result}\n\`\``
     return(result)
 }
-export{hashv2,test,letterGen}
+export{hashv2,letterGen}
